@@ -1,25 +1,19 @@
 {
-  "framework": "nextjs",
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/download/release",
-      "dest": "/api/download/release/route.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "functions": {
-    "src/app/api/download/release/route.ts": {
-      "maxDuration": 30
-    }
-  }
+    "framework":  "nextjs",
+    "version":  2,
+    "routes":  [
+                   {
+                       "src":  "/api/download/release",
+                       "dest":  "/api/download/release/route.ts"
+                   },
+                   {
+                       "src":  "/(.*)",
+                       "dest":  "/$1"
+                   }
+               ],
+    "functions":  {
+                      "src/app/api/download/release/route.ts":  {
+                                                                    "maxDuration":  30
+                                                                }
+                  }
 }
